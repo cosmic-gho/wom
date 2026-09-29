@@ -1,0 +1,529 @@
+[
+  {
+    "id": 123,
+    "name": "All Products",
+    "slug": "product",
+    "description": "",
+    "count": 0,
+    "parent": 0,
+    "seo": {
+      "title": "WOM Products, Oilfield Equipment Products - WOM Group",
+      "description": "All WOM products meet ISO and API performance and complete vertical integration, combined with a well-managed supply chain, ensures that customers receive orders according to their schedule.",
+      "image": {
+        "url": "/uploads/2019/11/WOMImg.jpg",
+        "originalUrl": "https://womgroup.com/wp-content/uploads/2019/11/WOMImg.jpg",
+        "localExists": false
+      }
+    }
+  },
+  {
+    "id": 124,
+    "name": "Surface",
+    "slug": "surface",
+    "description": "",
+    "count": 0,
+    "parent": 123,
+    "seo": {
+      "title": "Oilfield Surface Equipments Supplier - WOM Group",
+      "description": "WOM Group - a leading global oilfield surface equipment supplier provides arange of Surface oilfield products which are complemented by high-quality execution, engagement in early project phases along with innovative approach and digital capabilities.",
+      "image": {
+        "url": "/uploads/2019/11/WOMImg.jpg",
+        "originalUrl": "https://womgroup.com/wp-content/uploads/2019/11/WOMImg.jpg",
+        "localExists": false
+      }
+    }
+  },
+  {
+    "id": 125,
+    "name": "Subsea",
+    "slug": "subsea",
+    "description": "",
+    "count": 0,
+    "parent": 123,
+    "seo": {
+      "title": "Subsea Equipment - Worldwide Oilfield Machine Inc.",
+      "description": "WOM subsea technology used for offshore oil and gas production is a highly specialized ﬁeld of application that places particular demands on engineering.",
+      "image": {
+        "url": "/uploads/2019/11/WOMImg.jpg",
+        "originalUrl": "https://womgroup.com/wp-content/uploads/2019/11/WOMImg.jpg",
+        "localExists": false
+      }
+    }
+  },
+  {
+    "id": 126,
+    "name": "Actuators",
+    "slug": "actuators",
+    "description": "",
+    "count": 3,
+    "parent": 124,
+    "seo": {
+      "title": "WOM Actuators, Subsea Actuators Manufacturers - WOM Group",
+      "description": "Magnum Subsea Acuators are designed, built and tested to API 6A and 17D. It is equipped with anti -explosive decompression seals and energized non-elastomeric lip seals.",
+      "image": {
+        "url": "/uploads/2019/11/WOMImg.jpg",
+        "originalUrl": "https://womgroup.com/wp-content/uploads/2019/11/WOMImg.jpg",
+        "localExists": false
+      }
+    }
+  },
+  {
+    "id": 127,
+    "name": "Ball Valves",
+    "slug": "ball-valves",
+    "description": "",
+    "count": 3,
+    "parent": 124,
+    "seo": {
+      "title": "Ball Valves, Ball Valves Oilfield Equipment – WOM Group",
+      "description": "WOM Group - a leading Ball Valves oilfield equipment company in USA, offers wide range of Ball Valves products.",
+      "image": {
+        "url": "/uploads/2019/11/WOMImg.jpg",
+        "originalUrl": "https://womgroup.com/wp-content/uploads/2019/11/WOMImg.jpg",
+        "localExists": false
+      }
+    }
+  },
+  {
+    "id": 128,
+    "name": "BOPs",
+    "slug": "bops",
+    "description": "",
+    "count": 8,
+    "parent": 124,
+    "seo": {
+      "title": "BOPs Oilfield Equipments, Blowout Preventers (BOP) Products - WOM Group",
+      "description": "WOM's BOP is pressure energized and features hydraulically oprated locking mechanisms to hold the rams closed without actuation pressure. BOP head serves as an upper non sealing wear surface for the movement of the packing unit.",
+      "image": {
+        "url": "/uploads/2019/11/WOMImg.jpg",
+        "originalUrl": "https://womgroup.com/wp-content/uploads/2019/11/WOMImg.jpg",
+        "localExists": false
+      }
+    }
+  },
+  {
+    "id": 129,
+    "name": "Controls and Instrumentation",
+    "slug": "controls-and-instrumentation",
+    "description": "",
+    "count": 4,
+    "parent": 124,
+    "seo": {
+      "title": "Controls & Instrumentation - Worldwide Oilfield Machine",
+      "description": "WOM's Controls and Instrumentation is the surface equipment that can assist in maintaining safety, ensuring effective control and longevity of machinery.",
+      "image": {
+        "url": "/uploads/2019/11/WOMImg.jpg",
+        "originalUrl": "https://womgroup.com/wp-content/uploads/2019/11/WOMImg.jpg",
+        "localExists": false
+      }
+    }
+  },
+  {
+    "id": 130,
+    "name": "Custom Designs",
+    "slug": "custom-designs",
+    "description": "",
+    "count": 1,
+    "parent": 124,
+    "seo": {
+      "title": "Custom Designs - Worldwide Oilfield Machine Inc.",
+      "description": "WOM’s custom designed equipment utilizes Magnum technology wherever possible to provide the highest level of reliability in every package.",
+      "image": {
+        "url": "/uploads/2019/11/WOMImg.jpg",
+        "originalUrl": "https://womgroup.com/wp-content/uploads/2019/11/WOMImg.jpg",
+        "localExists": false
+      }
+    }
+  },
+  {
+    "id": 131,
+    "name": "Gate Valves",
+    "slug": "gate-valves",
+    "description": "",
+    "count": 10,
+    "parent": 124,
+    "seo": {
+      "title": "Gate Valves, Gate Valves Oilfield Equipments - WOM Group",
+      "description": "WOM Group leading manufacture company of Gate Valves surface equipments. Gate Valves are very easy to use and long lasting when they are installed and maintained correctly.",
+      "image": {
+        "url": "/uploads/2019/11/WOMImg.jpg",
+        "originalUrl": "https://womgroup.com/wp-content/uploads/2019/11/WOMImg.jpg",
+        "localExists": false
+      }
+    }
+  },
+  {
+    "id": 132,
+    "name": "Manifolds",
+    "slug": "manifolds",
+    "description": "",
+    "count": 4,
+    "parent": 124,
+    "seo": {
+      "title": "Manifolds Systems, Manifold Manufacturers - Worldwide Oilfield Machine Inc.",
+      "description": "WOM Manifolds Systems may incorporate magnum gate valves, check valves, plug vales. WOM designs manufactures and supplies high pressure choke and kill manifolds,standpipe,cement,well test and custom application manifolds.",
+      "image": {
+        "url": "/uploads/2019/11/WOMImg.jpg",
+        "originalUrl": "https://womgroup.com/wp-content/uploads/2019/11/WOMImg.jpg",
+        "localExists": false
+      }
+    }
+  },
+  {
+    "id": 133,
+    "name": "Pump Savers",
+    "slug": "pump-savers",
+    "description": "",
+    "count": 1,
+    "parent": 124,
+    "seo": {
+      "title": "Pump Savers, Pump Savers Surface Equipment - WOM Group",
+      "description": "WOM’s Pump Savers uses easy-to-install rupture disks which require no special tools to remove and replace. It is available in a wide choice of end connections and can be trimmed to handle H2S and salt water environments.",
+      "image": {
+        "url": "/uploads/2019/11/WOMImg.jpg",
+        "originalUrl": "https://womgroup.com/wp-content/uploads/2019/11/WOMImg.jpg",
+        "localExists": false
+      }
+    }
+  },
+  {
+    "id": 134,
+    "name": "Wellheads & Christmas Trees",
+    "slug": "wellheads-christmas-trees",
+    "description": "",
+    "count": 8,
+    "parent": 124,
+    "seo": {
+      "title": "Wellheads and Christmas Trees Products",
+      "description": "We offer a variety of Oilfield Christmas Tree Shearing equipment that are suitable for conventional and specialty wellhead systems.",
+      "image": {
+        "url": "/uploads/2019/11/WOMImg.jpg",
+        "originalUrl": "https://womgroup.com/wp-content/uploads/2019/11/WOMImg.jpg",
+        "localExists": false
+      }
+    }
+  },
+  {
+    "id": 135,
+    "name": "Well Test Equipment",
+    "slug": "well-test-equipment",
+    "description": "",
+    "count": 5,
+    "parent": 124,
+    "seo": {
+      "title": "Well Test Equipment, Surface Well Test Equipment Supplier - WOM Group",
+      "description": "WOM, one of the leading Well Test Equipment Suppliers having a light weight surface control head designed for use in testing, perforating, and wire line operations. Read more about Well Test Equipment.",
+      "image": {
+        "url": "/uploads/2019/11/WOMImg.jpg",
+        "originalUrl": "https://womgroup.com/wp-content/uploads/2019/11/WOMImg.jpg",
+        "localExists": false
+      }
+    }
+  },
+  {
+    "id": 136,
+    "name": "Subsea Well Operations",
+    "slug": "intervention-systems",
+    "description": "",
+    "count": 1,
+    "parent": 125,
+    "seo": {
+      "title": "Subsea Intervention System - Worldwide Oilfield Machine Inc.",
+      "description": "WOM's Subsea Intervention Systems makes full use of magnum gate valve technology, incororating Hydraulic Fail-Close Gate Valves and Subsea Magnum Gate Valve in both the Emergency Disconnect package and the Lower Rise Package.",
+      "image": {
+        "url": "/uploads/2019/11/WOMImg.jpg",
+        "originalUrl": "https://womgroup.com/wp-content/uploads/2019/11/WOMImg.jpg",
+        "localExists": false
+      }
+    }
+  },
+  {
+    "id": 250,
+    "name": "Plug Valve",
+    "slug": "plug-valve",
+    "description": "",
+    "count": 1,
+    "parent": 124,
+    "seo": {
+      "title": "Plug Valve Surface Equipment - Worldwide Oilfield Machine",
+      "description": "WOM Group leading supplier of Plug Valve Surface Equipment for oilfield industry. With unique bi-directional sealing design which creates pressure/energized balance between the slab gate and seat assemblies when subjected to line pressure.",
+      "image": {
+        "url": "/uploads/2019/11/WOMImg.jpg",
+        "originalUrl": "https://womgroup.com/wp-content/uploads/2019/11/WOMImg.jpg",
+        "localExists": false
+      }
+    }
+  },
+  {
+    "id": 251,
+    "name": "Check Valves",
+    "slug": "check-valves",
+    "description": "",
+    "count": 1,
+    "parent": 124,
+    "seo": {
+      "title": "Check Valves Products - Worldwide Oilfield Machine Inc.",
+      "description": "WOM offers a range of Check valves products prevents the back flow in high pressure and/or high temperature mud lines, choke & kill manifolds and Christmas tree injection and kill lines.",
+      "image": {
+        "url": "/uploads/2019/11/WOMImg.jpg",
+        "originalUrl": "https://womgroup.com/wp-content/uploads/2019/11/WOMImg.jpg",
+        "localExists": false
+      }
+    }
+  },
+  {
+    "id": 258,
+    "name": "Chokes",
+    "slug": "chokes",
+    "description": "",
+    "count": 10,
+    "parent": 124,
+    "seo": {
+      "title": "Drill Chokes, Drill Choke Surface Equipment Supplier - WOM Group",
+      "description": "WOM, one of the leading Drill Chokes surface equipment suppliers. These Drill Chokes are designed to provide accurate flow control throughout its operating range.",
+      "image": {
+        "url": "/uploads/2019/11/WOMImg.jpg",
+        "originalUrl": "https://womgroup.com/wp-content/uploads/2019/11/WOMImg.jpg",
+        "localExists": false
+      }
+    }
+  },
+  {
+    "id": 261,
+    "name": "Other Products",
+    "slug": "other-products",
+    "description": "",
+    "count": 4,
+    "parent": 123,
+    "seo": {
+      "title": "WOM Other Products - Worldwide Oilfield Machine Inc.",
+      "description": "All WOM products meet ISO and API performance and are engineered to surpass quality requirements.",
+      "image": {
+        "url": "/uploads/2019/11/WOMImg.jpg",
+        "originalUrl": "https://womgroup.com/wp-content/uploads/2019/11/WOMImg.jpg",
+        "localExists": false
+      }
+    }
+  },
+  {
+    "id": 263,
+    "name": "Underbalanced Drilling",
+    "slug": "underbalanced-drilling",
+    "description": "",
+    "count": 1,
+    "parent": 124,
+    "seo": {
+      "title": "Underbalanced Drilling (UBD) - Worldwide Oilfield Machine",
+      "description": "WOM Group offers Underbalanced Drilling (UBD) services, an advanced procedure used to drill oil and gas wells which increases well productivity, and reduces drilling problems.",
+      "image": {
+        "url": "/uploads/2019/11/WOMImg.jpg",
+        "originalUrl": "https://womgroup.com/wp-content/uploads/2019/11/WOMImg.jpg",
+        "localExists": false
+      }
+    }
+  },
+  {
+    "id": 264,
+    "name": "Subsea Intervention Systems",
+    "slug": "si-systems",
+    "description": "",
+    "count": 6,
+    "parent": 136,
+    "seo": {
+      "title": "Subsea Intervention Systems - Worldwide Oilfield Machine",
+      "description": "WOM's Subsea Intervention Systems (SI Systems) are designed for the unique challenges of deep and ultradeep water environments. Read more about Subsea intervention Systems (SI Systems)",
+      "image": {
+        "url": "/uploads/2019/11/WOMImg.jpg",
+        "originalUrl": "https://womgroup.com/wp-content/uploads/2019/11/WOMImg.jpg",
+        "localExists": false
+      }
+    }
+  },
+  {
+    "id": 265,
+    "name": "Subsea Production Systems",
+    "slug": "subsea-production-systems",
+    "description": "",
+    "count": 0,
+    "parent": 125,
+    "seo": {
+      "title": "Subsea Production Systems - Worldwide Oilfield Machine Inc.",
+      "description": "WOM Group has a wide range of Subsea Production Systems which are technically innovative Subsea solutions to enhance customers.",
+      "image": {
+        "url": "/uploads/2019/11/WOMImg.jpg",
+        "originalUrl": "https://womgroup.com/wp-content/uploads/2019/11/WOMImg.jpg",
+        "localExists": false
+      }
+    }
+  },
+  {
+    "id": 266,
+    "name": "Xmas Trees and Wellheads",
+    "slug": "xmas-trees-and-wellheads",
+    "description": "",
+    "count": 2,
+    "parent": 265,
+    "seo": {
+      "title": "Xmas Trees and Wellheads - Worldwide Oilfield Machine",
+      "description": "Xmas Trees and Wellheads are the primary pressure controlling Equipment for an Oilfiled Industry. Both, wellhead systems and christmas tree are manufactured in different sizes and configuration as per customer's requirment.",
+      "image": {
+        "url": "/uploads/2019/11/WOMImg.jpg",
+        "originalUrl": "https://womgroup.com/wp-content/uploads/2019/11/WOMImg.jpg",
+        "localExists": false
+      }
+    }
+  },
+  {
+    "id": 269,
+    "name": "Manifolds and Structures",
+    "slug": "subsea-manifolds-and-structures",
+    "description": "",
+    "count": 5,
+    "parent": 265,
+    "seo": {
+      "title": "Subsea-Manifolds-and-Structures - Worldwide Oilfield Machine Inc.",
+      "description": "WOM has major areas of expertise in the design and construction of Subsea Manifolds. Subsea Manifold incorporates reliable Magnum subsea gate valves and actuators which have proven field history over the years.",
+      "image": {
+        "url": "/uploads/2019/11/WOMImg.jpg",
+        "originalUrl": "https://womgroup.com/wp-content/uploads/2019/11/WOMImg.jpg",
+        "localExists": false
+      }
+    }
+  },
+  {
+    "id": 270,
+    "name": "Diversified Products",
+    "slug": "diversified-products",
+    "description": "",
+    "count": 0,
+    "parent": 123,
+    "seo": {
+      "title": "Diversified Products - Worldwide Oilfield Machine",
+      "description": "WOM group leading global oilfield company with diverse products which meets ISO and API performance, Also engineered to surpass quality requirements.",
+      "image": {
+        "url": "/uploads/2019/11/WOMImg.jpg",
+        "originalUrl": "https://womgroup.com/wp-content/uploads/2019/11/WOMImg.jpg",
+        "localExists": false
+      }
+    }
+  },
+  {
+    "id": 271,
+    "name": "Railways & Metro",
+    "slug": "railways-metro",
+    "description": "",
+    "count": 1,
+    "parent": 270,
+    "seo": {
+      "title": "Railways &amp; Metro Archives - Worldwide Oilfield Machine",
+      "description": "In the market for Railways & Metro products? Visit this page to see the full list of Railways & Metro products we offer.",
+      "image": {
+        "url": "/uploads/2019/11/WOMImg.jpg",
+        "originalUrl": "https://womgroup.com/wp-content/uploads/2019/11/WOMImg.jpg",
+        "localExists": false
+      }
+    }
+  },
+  {
+    "id": 284,
+    "name": "Flow Control Products",
+    "slug": "flow-control-products",
+    "description": "",
+    "count": 10,
+    "parent": 124,
+    "seo": {
+      "title": "Flow Control Products - Worldwide Oilfield Machine",
+      "description": "WOM Group, leading manufacturing company specializes in advanced technique, designing and manufacturing of required Flow Control Products.",
+      "image": {
+        "url": "/uploads/2019/11/WOMImg.jpg",
+        "originalUrl": "https://womgroup.com/wp-content/uploads/2019/11/WOMImg.jpg",
+        "localExists": false
+      }
+    }
+  },
+  {
+    "id": 294,
+    "name": "Riser Systems-10K and 15K",
+    "slug": "riser-systems",
+    "description": "",
+    "count": 2,
+    "parent": 264,
+    "seo": {
+      "title": "Riser Systems-10K and 15K Archives - Worldwide Oilfield Machine",
+      "description": "In the market for a Riser System - 10K or 15K? Visit this page to see the full list of Deepwater Riser Systems we offer.",
+      "image": {
+        "url": "/uploads/2019/11/WOMImg.jpg",
+        "originalUrl": "https://womgroup.com/wp-content/uploads/2019/11/WOMImg.jpg",
+        "localExists": false
+      }
+    }
+  },
+  {
+    "id": 295,
+    "name": "Riserless Systems - 10K and 15K",
+    "slug": "riserless-systems",
+    "description": "",
+    "count": 1,
+    "parent": 264,
+    "seo": {
+      "title": "Riserless Systems - 10K and 15K Archives",
+      "description": "In the market for a Riserless System - 10K and 15K? Visit this page to see the full list of Riser Systems we offer.",
+      "image": {
+        "url": "/uploads/2019/11/WOMImg.jpg",
+        "originalUrl": "https://womgroup.com/wp-content/uploads/2019/11/WOMImg.jpg",
+        "localExists": false
+      }
+    }
+  },
+  {
+    "id": 296,
+    "name": "Products",
+    "slug": "products-si-systems",
+    "description": "",
+    "count": 9,
+    "parent": 264,
+    "seo": {
+      "title": "Products Archives - Worldwide Oilfield Machine",
+      "description": "In the market for a Subsea Intervention System? Visit this page to see the full list of Subsea Intervention Systems we offer.",
+      "image": {
+        "url": "/uploads/2019/11/WOMImg.jpg",
+        "originalUrl": "https://womgroup.com/wp-content/uploads/2019/11/WOMImg.jpg",
+        "localExists": false
+      }
+    }
+  },
+  {
+    "id": 300,
+    "name": "Connectors",
+    "slug": "connectors",
+    "description": "",
+    "count": 1,
+    "parent": 265,
+    "seo": {
+      "title": "Connectors Archives - Worldwide Oilfield Machine",
+      "description": "In the market for Subsea Production Systems Connectors? Visit this page to see the full list of connectors we have to offer.",
+      "image": {
+        "url": "/uploads/2019/11/WOMImg.jpg",
+        "originalUrl": "https://womgroup.com/wp-content/uploads/2019/11/WOMImg.jpg",
+        "localExists": false
+      }
+    }
+  },
+  {
+    "id": 301,
+    "name": "Subsea Valves and Actuators",
+    "slug": "products-subsea-ps",
+    "description": "",
+    "count": 3,
+    "parent": 265,
+    "seo": {
+      "title": "Subsea Valves and Actuators Archives - Worldwide Oilfield Machine",
+      "description": "In the market for Subsea Valves and Actuators? Visit this page to see the full product list of Subsea Valves and Actuators we offer.",
+      "image": {
+        "url": "/uploads/2019/11/WOMImg.jpg",
+        "originalUrl": "https://womgroup.com/wp-content/uploads/2019/11/WOMImg.jpg",
+        "localExists": false
+      }
+    }
+  }
+]

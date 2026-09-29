@@ -1,0 +1,38 @@
+[
+  {
+    "id": 207,
+    "name": "USA",
+    "slug": "usa",
+    "count": 8
+  },
+  {
+    "id": 208,
+    "name": "UAE",
+    "slug": "uae",
+    "count": 3
+  },
+  {
+    "id": 209,
+    "name": "UK",
+    "slug": "uk",
+    "count": 1
+  },
+  {
+    "id": 210,
+    "name": "Singapore",
+    "slug": "singapore",
+    "count": 1
+  },
+  {
+    "id": 211,
+    "name": "India",
+    "slug": "india",
+    "count": 3
+  },
+  {
+    "id": 272,
+    "name": "Brazil",
+    "slug": "brazil",
+    "count": 1
+  }
+]

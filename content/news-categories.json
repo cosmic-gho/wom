@@ -1,0 +1,22 @@
+[
+  {
+    "id": 141,
+    "name": "News",
+    "slug": "news"
+  },
+  {
+    "id": 142,
+    "name": "Events",
+    "slug": "events"
+  },
+  {
+    "id": 143,
+    "name": "Achievements",
+    "slug": "achievements"
+  },
+  {
+    "id": 279,
+    "name": "Products/Services",
+    "slug": "products-services"
+  }
+]
