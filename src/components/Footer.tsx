@@ -9,13 +9,12 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-gray-800">
           {/* Brand & Corporate Statement */}
           <div className="lg:col-span-2 space-y-4">
-            <Link href="/" className="inline-block">
-              <span className="text-2xl font-black tracking-wider text-white flex items-center">
-                <span className="text-wom-orange">W</span>OM
-                <span className="ml-1 text-xs uppercase px-1.5 py-0.5 rounded bg-wom-orange text-white font-bold tracking-normal">
-                  GROUP
-                </span>
-              </span>
+            <Link href="/" className="inline-flex items-center gap-3 bg-white px-3 py-1.5 rounded-lg shadow-sm">
+              <img
+                src="/images/logo.jpg"
+                alt="Worldwide Oilfield Machine (WOM)"
+                className="h-10 w-auto object-contain"
+              />
             </Link>
             <p className="text-sm text-gray-400 leading-relaxed max-w-sm">
               Worldwide Oilfield Machine (WOM) is a globally recognized manufacturer and supplier of pressure control equipment for both surface and subsea applications in the oil and gas industry.

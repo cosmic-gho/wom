@@ -41,16 +41,18 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3">
-            <div className="flex flex-col">
-              <span className="text-2xl font-black tracking-wider text-wom-dark flex items-center">
-                <span className="text-wom-orange">W</span>OM
-                <span className="ml-1 text-xs uppercase px-1.5 py-0.5 rounded bg-wom-orange text-white font-bold tracking-normal">
-                  GROUP
-                </span>
+          <Link href="/" className="flex items-center gap-3 py-1">
+            <img
+              src="/images/logo.jpg"
+              alt="Worldwide Oilfield Machine (WOM)"
+              className="h-12 w-auto object-contain"
+            />
+            <div className="hidden sm:flex flex-col border-l border-gray-200 pl-3">
+              <span className="text-base font-black tracking-tight text-gray-900 leading-tight">
+                WORLDWIDE OILFIELD MACHINE
               </span>
-              <span className="text-[10px] text-gray-500 font-medium tracking-tight">
-                Worldwide Oilfield Machine
+              <span className="text-[10px] text-gray-500 font-semibold tracking-wider uppercase">
+                Pressure Control &amp; Subsea Systems
               </span>
             </div>
           </Link>
