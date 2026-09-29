@@ -33,9 +33,10 @@ function normalizeImageUrl(url) {
 
 function cleanHtml(html) {
   if (!html) return '';
-  // Replace remote womgroup uploads URLs with local /uploads/
-  let cleaned = html.replace(/https?:\/\/(?:www\.)?womgroup\.com\/wp-content\/uploads\//g, '/uploads/');
+  // Replace remote uploads URLs with local /uploads/
+  let cleaned = html.replace(/https?:\/\/(?:www\.)?(?:womgroup\.com|worldwideoilfieldmachinery\.com)\/wp-content\/uploads\//g, '/uploads/');
   cleaned = cleaned.replace(/wp-content\/uploads\//g, '/uploads/');
+  cleaned = cleaned.replace(/https?:\/\/(?:www\.)?womgroup\.com/g, 'https://worldwideoilfieldmachinery.com');
   return cleaned;
 }
 

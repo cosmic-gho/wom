@@ -71,10 +71,10 @@ export default function CareersPage() {
             Submit your resume and credentials directly to our Human Resources team.
           </p>
           <a
-            href="mailto:careers@womgroup.com"
+            href="mailto:careers@worldwideoilfieldmachinery.com"
             className="inline-block bg-wom-orange hover:bg-wom-orangeHover text-white px-8 py-3 rounded-full text-xs font-bold transition shadow"
           >
-            Email HR: careers@womgroup.com
+            Email HR: careers@worldwideoilfieldmachinery.com
           </a>
         </div>
       </div>
