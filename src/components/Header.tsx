@@ -21,18 +21,18 @@ export function Header() {
         </div>
         <div className="hidden md:flex items-center gap-6">
           <a
-            href="mailto:info@womgroup.com"
+            href="mailto:info@worldwideoilfieldmachinery.com"
             className="flex items-center gap-1.5 hover:text-white transition"
           >
             <Mail className="w-3.5 h-3.5 text-wom-orange" />
-            info@womgroup.com
+            info@worldwideoilfieldmachinery.com
           </a>
           <a
             href="tel:+18328028000"
             className="flex items-center gap-1.5 hover:text-white transition"
           >
             <Phone className="w-3.5 h-3.5 text-wom-orange" />
-            +1 (832) 802-8000
+            +1 (000) 000-8000
           </a>
         </div>
       </div>

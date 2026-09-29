@@ -28,13 +28,13 @@ export function Footer() {
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-wom-orange shrink-0" />
                 <a href="tel:+18328028000" className="hover:text-white transition">
-                  +1 (832) 802-8000
+                  +1 (000) 000-8000
                 </a>
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-wom-orange shrink-0" />
-                <a href="mailto:info@womgroup.com" className="hover:text-white transition">
-                  info@womgroup.com
+                <a href="mailto:info@worldwideoilfieldmachinery.com" className="hover:text-white transition">
+                  info@worldwideoilfieldmachinery.com
                 </a>
               </div>
             </div>

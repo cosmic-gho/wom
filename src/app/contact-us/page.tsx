@@ -47,13 +47,13 @@ export default function ContactUsPage() {
                 <div className="flex items-center gap-2.5">
                   <Phone className="w-4 h-4 text-wom-orange shrink-0" />
                   <a href="tel:+18328028000" className="hover:text-wom-orange transition">
-                    +1 (832) 802-8000
+                    +1 (000) 000-8000
                   </a>
                 </div>
                 <div className="flex items-center gap-2.5">
                   <Mail className="w-4 h-4 text-wom-orange shrink-0" />
-                  <a href="mailto:info@womgroup.com" className="hover:text-wom-orange transition">
-                    info@womgroup.com
+                  <a href="mailto:info@worldwideoilfieldmachinery.com" className="hover:text-wom-orange transition">
+                    info@worldwideoilfieldmachinery.com
                   </a>
                 </div>
                 <div className="flex items-center gap-2.5">
