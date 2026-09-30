@@ -46,8 +46,8 @@ export default function ContactUsPage() {
                 </div>
                 <div className="flex items-center gap-2.5">
                   <Phone className="w-4 h-4 text-wom-orange shrink-0" />
-                  <a href="tel:+18328028000" className="hover:text-wom-orange transition">
-                    +1 (000) 000-8000
+                  <a href="tel:+13213959915" className="hover:text-wom-orange transition">
+                    +1 321 395 9915
                   </a>
                 </div>
                 <div className="flex items-center gap-2.5">

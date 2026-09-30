@@ -11,9 +11,10 @@ interface ProductCardProps {
 export function ProductCard({ product }: ProductCardProps) {
   const imageUrl = product.featuredImage?.url || "/uploads/placeholder.jpg";
   const primaryCategory = product.categories[0]?.name;
+  const productUrl = `/products/${product.slug}`;
 
   return (
-    <div className="group flex flex-col bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-xl hover:border-wom-orange/40 transition-all duration-300">
+    <div className="relative group flex flex-col bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-xl hover:border-wom-orange/40 transition-all duration-300">
       {/* Image container */}
       <div className="relative h-52 bg-gray-50 flex items-center justify-center p-4 border-b border-gray-100 overflow-hidden">
         {product.featuredImage ? (
@@ -31,7 +32,7 @@ export function ProductCard({ product }: ProductCardProps) {
         )}
 
         {primaryCategory && (
-          <span className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-xs font-semibold px-2.5 py-1 rounded-full text-gray-700 shadow-sm border border-gray-100">
+          <span className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-xs font-semibold px-2.5 py-1 rounded-full text-gray-700 shadow-sm border border-gray-100 z-20">
             {primaryCategory}
           </span>
         )}
@@ -66,12 +67,18 @@ export function ProductCard({ product }: ProductCardProps) {
           )}
         </div>
 
-        <div className="pt-3 border-t border-gray-100 flex items-center justify-between text-xs font-bold text-wom-orange group-hover:translate-x-1 transition-transform">
+        {/* View Specifications button with direct z-20 link for touch devices */}
+        <Link
+          href={productUrl}
+          className="relative z-20 pt-3 border-t border-gray-100 flex items-center justify-between text-xs font-bold text-wom-orange group-hover:translate-x-1 transition-transform cursor-pointer"
+        >
           <span>View Specifications</span>
           <ArrowRight className="w-4 h-4" />
-        </div>
+        </Link>
       </div>
-      <Link href={`/products/${product.slug}`} className="absolute inset-0" aria-label={product.title} />
+
+      {/* Full card clickable overlay link */}
+      <Link href={productUrl} className="absolute inset-0 z-10" aria-label={product.title} />
     </div>
   );
 }

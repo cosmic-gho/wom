@@ -28,11 +28,11 @@ export function Header() {
             info@worldwideoilfieldmachinery.com
           </a>
           <a
-            href="tel:+18328028000"
+            href="tel:+13213959915"
             className="flex items-center gap-1.5 hover:text-white transition"
           >
             <Phone className="w-3.5 h-3.5 text-wom-orange" />
-            +1 (000) 000-8000
+            +1 321 395 9915
           </a>
         </div>
       </div>
