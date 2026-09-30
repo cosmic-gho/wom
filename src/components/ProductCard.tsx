@@ -40,9 +40,25 @@ export function ProductCard({ product }: ProductCardProps) {
       {/* Card Body */}
       <div className="p-5 flex flex-col flex-1 justify-between">
         <div>
-          <h3 className="font-bold text-gray-900 group-hover:text-wom-orange transition text-lg line-clamp-2 mb-2">
-            {product.title}
-          </h3>
+          <div className="flex items-center justify-between gap-2 mb-2">
+            <h3 className="font-bold text-gray-900 group-hover:text-wom-orange transition text-lg line-clamp-2">
+              {product.title}
+            </h3>
+          </div>
+
+          <div className="mb-3">
+            {product.priceOnRequest || !product.price ? (
+              <span className="inline-block text-[11px] font-bold text-amber-700 bg-amber-50 border border-amber-200 px-2 py-0.5 rounded">
+                Price on Request
+              </span>
+            ) : (
+              <span className="inline-block text-sm font-extrabold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 rounded">
+                {product.currency === 'EUR' ? '€' : product.currency === 'GBP' ? '£' : '$'}
+                {Number(product.price).toLocaleString(undefined, { minimumFractionDigits: 2 })}
+              </span>
+            )}
+          </div>
+
           {product.excerpt && (
             <p className="text-xs text-gray-500 line-clamp-3 mb-4 leading-relaxed">
               {product.excerpt}

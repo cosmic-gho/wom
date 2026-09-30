@@ -33,6 +33,9 @@ export interface Product {
   featuredImage: ImageData | null;
   seo: SEOData;
   breadcrumbs: string[];
+  price?: number | null;
+  currency?: string;
+  priceOnRequest?: boolean;
 }
 
 export interface LocationItem {
