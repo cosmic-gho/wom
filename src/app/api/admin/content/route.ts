@@ -203,6 +203,7 @@ export async function POST(request: Request) {
         };
 
         let savedToSupabase = false;
+        let dbErrorDetail = '';
 
         // Save to Supabase if configured
         if (isSupabaseConfigured() && supabase && tableName) {
@@ -211,14 +212,16 @@ export async function POST(request: Request) {
                 const { data, error } = await supabase.from(tableName).insert([dbPayload]).select();
                 if (error) {
                     console.error('Supabase INSERT Error:', error);
+                    dbErrorDetail = error.message;
                 } else {
                     savedToSupabase = true;
                     if (data && data[0]) {
                         newItem.id = data[0].id;
                     }
                 }
-            } catch (dbErr) {
+            } catch (dbErr: any) {
                 console.error('Supabase INSERT Exception:', dbErr);
+                dbErrorDetail = dbErr.message || String(dbErr);
             }
         }
 
@@ -228,7 +231,7 @@ export async function POST(request: Request) {
 
         if (!savedToSupabase && !diskSuccess) {
             return NextResponse.json(
-                { success: false, error: 'Failed to save to database or disk' },
+                { success: false, error: dbErrorDetail || 'Failed to save to database or disk' },
                 { status: 500 }
             );
         }
@@ -281,6 +284,7 @@ export async function PUT(request: Request) {
         }
 
         let savedToSupabase = false;
+        let dbErrorDetail = '';
 
         // Update in Supabase if configured
         if (isSupabaseConfigured() && supabase && tableName) {
@@ -289,11 +293,13 @@ export async function PUT(request: Request) {
                 const { error } = await supabase.from(tableName).update(dbPayload).eq('id', numericId);
                 if (error) {
                     console.error('Supabase UPDATE Error:', error);
+                    dbErrorDetail = error.message;
                 } else {
                     savedToSupabase = true;
                 }
-            } catch (dbErr) {
+            } catch (dbErr: any) {
                 console.error('Supabase UPDATE Exception:', dbErr);
+                dbErrorDetail = dbErr.message || String(dbErr);
             }
         }
 
@@ -307,7 +313,7 @@ export async function PUT(request: Request) {
 
         if (!savedToSupabase && !diskSuccess) {
             return NextResponse.json(
-                { success: false, error: 'Failed to save updates to database or disk' },
+                { success: false, error: dbErrorDetail || 'Failed to save updates to database or disk' },
                 { status: 500 }
             );
         }
