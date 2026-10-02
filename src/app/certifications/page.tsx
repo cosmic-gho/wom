@@ -9,9 +9,11 @@ export const metadata: Metadata = {
   description: "WOM certifications including API 6A, API 16A, API 17D, ISO 9001, ASME, and CE PED.",
 };
 
-export default function CertificationsPage() {
-  const page = getPageBySlug("certifications");
-  const certResources = getResources();
+export const revalidate = 0;
+
+export default async function CertificationsPage() {
+  const page = await getPageBySlug("certifications");
+  const certResources = await getResources();
 
   return (
     <div className="py-12 bg-white min-h-screen">

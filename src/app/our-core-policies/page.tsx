@@ -8,8 +8,10 @@ export const metadata: Metadata = {
   description: "Worldwide Oilfield Machine core quality, health, safety, and environmental policies.",
 };
 
-export default function CorePoliciesPage() {
-  const page = getPageBySlug("our-core-policies");
+export const revalidate = 0;
+
+export default async function CorePoliciesPage() {
+  const page = await getPageBySlug("our-core-policies");
 
   return (
     <div className="py-12 bg-white min-h-screen">

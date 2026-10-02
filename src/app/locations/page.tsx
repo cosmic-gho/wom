@@ -9,8 +9,10 @@ export const metadata: Metadata = {
   description: "Worldwide Oilfield Machine manufacturing facilities, engineering centers, and sales offices strategically located worldwide in USA, Scotland, UAE, India, and Singapore.",
 };
 
-export default function LocationsPage() {
-  const locations = getLocations();
+export const revalidate = 0;
+
+export default async function LocationsPage() {
+  const locations = await getLocations();
 
   return (
     <div className="py-12 bg-gray-50 min-h-screen">

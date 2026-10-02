@@ -9,8 +9,10 @@ export const metadata: Metadata = {
   description: "Download official technical certifications, product brochures, API licenses, and spec sheets.",
 };
 
-export default function ResourcesPage() {
-  const resources = getResources();
+export const revalidate = 0;
+
+export default async function ResourcesPage() {
+  const resources = await getResources();
 
   return (
     <div className="py-12 bg-gray-50 min-h-screen">

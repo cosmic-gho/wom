@@ -9,8 +9,10 @@ export const metadata: Metadata = {
   description: "Join the global engineering and manufacturing teams at Worldwide Oilfield Machine.",
 };
 
-export default function CareersPage() {
-  const page = getPageBySlug("wom-careers");
+export const revalidate = 0;
+
+export default async function CareersPage() {
+  const page = await getPageBySlug("wom-careers");
 
   return (
     <div className="py-12 bg-white min-h-screen">

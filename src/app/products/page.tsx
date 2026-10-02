@@ -9,9 +9,11 @@ export const metadata: Metadata = {
   description: "Explore the comprehensive range of WOM surface and subsea pressure control equipment, gate valves, ball valves, BOPs, and flow control systems.",
 };
 
-export default function ProductsPage() {
-  const products = getProducts();
-  const categories = getProductCategories().filter(c => c.count > 0);
+export const revalidate = 0;
+
+export default async function ProductsPage() {
+  const products = await getProducts();
+  const categories = (await getProductCategories()).filter(c => c.count > 0);
 
   return (
     <div className="py-12 bg-gray-50 min-h-screen">

@@ -9,8 +9,11 @@ interface LocationPageProps {
   params: Promise<{ slug: string }>;
 }
 
+export const revalidate = 0;
+export const dynamicParams = true;
+
 export async function generateStaticParams() {
-  const locations = getLocations();
+  const locations = await getLocations();
   return locations.map((loc) => ({
     slug: loc.slug,
   }));
@@ -18,7 +21,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: LocationPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const location = getLocationBySlug(slug);
+  const location = await getLocationBySlug(slug);
   if (!location) return {};
 
   return {
@@ -29,7 +32,7 @@ export async function generateMetadata({ params }: LocationPageProps): Promise<M
 
 export default async function LocationDetailPage({ params }: LocationPageProps) {
   const { slug } = await params;
-  const location = getLocationBySlug(slug);
+  const location = await getLocationBySlug(slug);
 
   if (!location) {
     notFound();

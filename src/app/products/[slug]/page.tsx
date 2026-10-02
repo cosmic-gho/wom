@@ -9,8 +9,11 @@ interface ProductPageProps {
   params: Promise<{ slug: string }>;
 }
 
+export const revalidate = 0;
+export const dynamicParams = true;
+
 export async function generateStaticParams() {
-  const products = getProducts();
+  const products = await getProducts();
   return products.map((product) => ({
     slug: product.slug,
   }));
@@ -18,19 +21,19 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const product = getProductBySlug(slug);
+  const product = await getProductBySlug(slug);
   if (!product) return {};
 
   return {
-    title: product.seo.title || `${product.title} - Worldwide Oilfield Machine`,
-    description: product.seo.description || product.excerpt || `Technical specifications for ${product.title}`,
-    openGraph: product.seo.ogImage ? { images: [product.seo.ogImage] } : undefined,
+    title: product.seo?.title || `${product.title} - Worldwide Oilfield Machine`,
+    description: product.seo?.description || product.excerpt || `Technical specifications for ${product.title}`,
+    openGraph: product.seo?.ogImage ? { images: [product.seo.ogImage] } : undefined,
   };
 }
 
 export default async function ProductDetailPage({ params }: ProductPageProps) {
   const { slug } = await params;
-  const product = getProductBySlug(slug);
+  const product = await getProductBySlug(slug);
 
   if (!product) {
     notFound();

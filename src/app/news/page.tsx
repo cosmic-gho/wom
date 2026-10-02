@@ -8,8 +8,10 @@ export const metadata: Metadata = {
   description: "Stay updated with company announcements, engineering breakthroughs, industry exhibitions, and field milestones from Worldwide Oilfield Machine.",
 };
 
-export default function NewsPage() {
-  const news = getNews();
+export const revalidate = 0;
+
+export default async function NewsPage() {
+  const news = await getNews();
 
   return (
     <div className="py-12 bg-gray-50 min-h-screen">

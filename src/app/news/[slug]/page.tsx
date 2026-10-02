@@ -9,8 +9,11 @@ interface NewsPageProps {
   params: Promise<{ slug: string }>;
 }
 
+export const revalidate = 0;
+export const dynamicParams = true;
+
 export async function generateStaticParams() {
-  const news = getNews();
+  const news = await getNews();
   return news.map((item) => ({
     slug: item.slug,
   }));
@@ -18,7 +21,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: NewsPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const item = getNewsBySlug(slug);
+  const item = await getNewsBySlug(slug);
   if (!item) return {};
 
   return {
@@ -29,7 +32,7 @@ export async function generateMetadata({ params }: NewsPageProps): Promise<Metad
 
 export default async function NewsDetailPage({ params }: NewsPageProps) {
   const { slug } = await params;
-  const item = getNewsBySlug(slug);
+  const item = await getNewsBySlug(slug);
 
   if (!item) {
     notFound();

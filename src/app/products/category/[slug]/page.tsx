@@ -9,8 +9,11 @@ interface CategoryPageProps {
   params: Promise<{ slug: string }>;
 }
 
+export const revalidate = 0;
+export const dynamicParams = true;
+
 export async function generateStaticParams() {
-  const categories = getProductCategories();
+  const categories = await getProductCategories();
   return categories.map((cat) => ({
     slug: cat.slug,
   }));
@@ -18,7 +21,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const category = getCategoryBySlug(slug);
+  const category = await getCategoryBySlug(slug);
   if (!category) return {};
 
   return {
@@ -29,14 +32,14 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
 
 export default async function CategoryPage({ params }: CategoryPageProps) {
   const { slug } = await params;
-  const category = getCategoryBySlug(slug);
+  const category = await getCategoryBySlug(slug);
 
   if (!category) {
     notFound();
   }
 
-  const products = getProductsByCategory(slug);
-  const allCategories = getProductCategories().filter((c) => c.count > 0);
+  const products = await getProductsByCategory(slug);
+  const allCategories = (await getProductCategories()).filter((c) => c.count > 0);
 
   return (
     <div className="py-12 bg-gray-50 min-h-screen">

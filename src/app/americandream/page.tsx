@@ -8,8 +8,10 @@ export const metadata: Metadata = {
   description: "The founding journey and American Dream story of Worldwide Oilfield Machine.",
 };
 
-export default function AmericanDreamPage() {
-  const page = getPageBySlug("americandream");
+export const revalidate = 0;
+
+export default async function AmericanDreamPage() {
+  const page = await getPageBySlug("americandream");
 
   return (
     <div className="py-12 bg-white min-h-screen">

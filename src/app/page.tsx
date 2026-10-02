@@ -15,11 +15,13 @@ import {
   Factory
 } from "lucide-react";
 
-export default function HomePage() {
-  const products = getProducts().slice(0, 6);
-  const categories = getProductCategories().filter(c => c.count > 0).slice(0, 8);
-  const locations = getLocations().slice(0, 4);
-  const news = getNews().slice(0, 3);
+export const revalidate = 0;
+
+export default async function HomePage() {
+  const products = (await getProducts()).slice(0, 6);
+  const categories = (await getProductCategories()).filter(c => c.count > 0).slice(0, 8);
+  const locations = (await getLocations()).slice(0, 4);
+  const news = (await getNews()).slice(0, 3);
 
   return (
     <div>

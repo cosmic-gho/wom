@@ -9,8 +9,10 @@ export const metadata: Metadata = {
   description: "Comprehensive listing of WOM granted and pending patents in valve systems, compact cutting devices, dual seals, and deepwater riser intervention.",
 };
 
-export default function PatentsPage() {
-  const page = getPageBySlug("patents");
+export const revalidate = 0;
+
+export default async function PatentsPage() {
+  const page = await getPageBySlug("patents");
 
   return (
     <div className="py-12 bg-white min-h-screen">

@@ -8,8 +8,10 @@ export const metadata: Metadata = {
   description: "Learn about the history, evolution, and founding vision of Worldwide Oilfield Machine since 1980.",
 };
 
-export default function OurStoryPage() {
-  const page = getPageBySlug("our-story");
+export const revalidate = 0;
+
+export default async function OurStoryPage() {
+  const page = await getPageBySlug("our-story");
 
   return (
     <div className="py-12 bg-white min-h-screen">
