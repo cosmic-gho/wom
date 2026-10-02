@@ -5427,3 +5427,15 @@ Protective Structure (FFS) available</li></ul>
 
 -- Seeding Site Settings
 INSERT INTO public.site_settings (key, value) VALUES ('general', '{"name":"Worldwide Oilfield Machine (WOM)","tagline":"Total Solutions for Oil & Gas Industry","headquarters":"Houston, Texas, USA","stats":{"totalProducts":96,"totalCategories":31,"totalLocations":17,"totalNewsArticles":83,"totalResources":43,"totalCorePages":14},"navigation":[{"label":"Home","href":"/"},{"label":"About Us","children":[{"label":"Our Story","href":"/our-story"},{"label":"Our Core Policies","href":"/our-core-policies"},{"label":"Certifications","href":"/certifications"},{"label":"Patents","href":"/patents"},{"label":"The American Dream","href":"/americandream"}]},{"label":"Products","href":"/products","featuredCategories":["Gate Valves","Ball Valves","BOPs","Chokes","Wellheads & Christmas Trees","Subsea Intervention Systems"]},{"label":"Locations","href":"/locations"},{"label":"News & Events","href":"/news"},{"label":"Resources","href":"/resources"},{"label":"Careers","href":"/wom-careers"},{"label":"Contact Us","href":"/contact-us"}],"socials":{"facebook":"https://www.facebook.com/womglobalgroup","twitter":"https://x.com/womglobalgroup","instagram":"https://www.instagram.com/womglobalgroup/","youtube":"https://www.youtube.com/channel/UC9dLzkFrVOaA8ISDRpAvA7A"}}'::jsonb) ON CONFLICT (key) DO UPDATE SET value = EXCLUDED.value;
+
+-- ===================================================
+-- SYNCHRONIZE POSTGRESQL SEQUENCES
+-- Prevents "duplicate key value violates unique constraint" errors
+-- ===================================================
+SELECT setval('public.products_id_seq', COALESCE((SELECT MAX(id) FROM public.products), 1));
+SELECT setval('public.news_id_seq', COALESCE((SELECT MAX(id) FROM public.news), 1));
+SELECT setval('public.locations_id_seq', COALESCE((SELECT MAX(id) FROM public.locations), 1));
+SELECT setval('public.resources_id_seq', COALESCE((SELECT MAX(id) FROM public.resources), 1));
+SELECT setval('public.inquiries_id_seq', COALESCE((SELECT MAX(id) FROM public.inquiries), 1));
+SELECT setval('public.site_settings_id_seq', COALESCE((SELECT MAX(id) FROM public.site_settings), 1));
+

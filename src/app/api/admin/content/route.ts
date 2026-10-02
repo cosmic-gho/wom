@@ -185,9 +185,27 @@ export async function POST(request: Request) {
         const tableName = TABLE_MAP[type];
         const items = readJsonFile(filename);
 
-        // Calculate new ID
+        // Query maximum existing ID directly from Supabase to prevent duplicate primary key collisions
+        let maxDbId = 0;
+        if (isSupabaseConfigured() && supabase && tableName) {
+            try {
+                const { data: maxRows } = await supabase
+                    .from(tableName)
+                    .select('id')
+                    .order('id', { ascending: false })
+                    .limit(1);
+                if (maxRows && maxRows.length > 0 && maxRows[0]?.id) {
+                    maxDbId = Number(maxRows[0].id) || 0;
+                }
+            } catch (err) {
+                console.warn('Could not query max ID from Supabase:', err);
+            }
+        }
+
+        // Calculate new safe ID
         const existingIds = items.map((i: any) => Number(i.id)).filter((n) => !isNaN(n));
-        const newId = existingIds.length > 0 ? Math.max(...existingIds) + 1 : Date.now();
+        const maxLocalId = existingIds.length > 0 ? Math.max(...existingIds) : 0;
+        const newId = (Math.max(maxDbId, maxLocalId) || 0) + 1;
 
         // Generate slug if missing
         const rawTitle = item.title || item.name || `item-${newId}`;
@@ -195,8 +213,8 @@ export async function POST(request: Request) {
         const nowIso = new Date().toISOString();
 
         const newItem = {
-            id: item.id ? Number(item.id) : newId,
             ...item,
+            id: item.id ? Number(item.id) : newId,
             slug: generatedSlug,
             date: item.date || nowIso,
             modified: nowIso,
@@ -208,8 +226,26 @@ export async function POST(request: Request) {
         // Save to Supabase if configured
         if (isSupabaseConfigured() && supabase && tableName) {
             try {
-                const dbPayload = formatForSupabase(type, newItem);
-                const { data, error } = await supabase.from(tableName).insert([dbPayload]).select();
+                let dbPayload = formatForSupabase(type, newItem);
+                let { data, error } = await supabase.from(tableName).insert([dbPayload]).select();
+
+                // If duplicate key error occurs, re-query latest max ID and retry with fresh ID
+                if (error && (error.code === '23505' || error.message?.includes('duplicate key') || error.message?.includes('_pkey'))) {
+                    console.warn('Duplicate key detected. Recalculating highest ID from database and retrying insert...');
+                    const { data: latestRows } = await supabase
+                        .from(tableName)
+                        .select('id')
+                        .order('id', { ascending: false })
+                        .limit(1);
+                    const freshMaxId = latestRows && latestRows[0]?.id ? Number(latestRows[0].id) : newId;
+                    const safeRetryId = freshMaxId + 1;
+                    newItem.id = safeRetryId;
+                    dbPayload = formatForSupabase(type, newItem);
+                    const retryRes = await supabase.from(tableName).insert([dbPayload]).select();
+                    data = retryRes.data;
+                    error = retryRes.error;
+                }
+
                 if (error) {
                     console.error('Supabase INSERT Error:', error);
                     dbErrorDetail = error.message;
