@@ -233,13 +233,13 @@ export default function AdminProductsPage() {
 
                                         {/* Price Column */}
                                         <td className="py-3 px-4 font-mono font-semibold">
-                                            {product.priceOnRequest || !product.price ? (
-                                                <span className="text-amber-400 text-[11px] font-sans font-medium">Price on Request</span>
-                                            ) : (
+                                            {product.price !== undefined && product.price !== null && !isNaN(Number(product.price)) && Number(product.price) > 0 ? (
                                                 <span className="text-emerald-400">
-                                                    {product.currency === 'EUR' ? '€' : product.currency === 'GBP' ? '£' : '$'}
+                                                    {product.currency === 'EUR' ? '€' : product.currency === 'GBP' ? '£' : product.currency === 'AED' ? 'AED ' : '$'}
                                                     {Number(product.price).toLocaleString(undefined, { minimumFractionDigits: 2 })}
                                                 </span>
+                                            ) : (
+                                                <span className="text-amber-400 text-[11px] font-sans font-medium">Price on Request</span>
                                             )}
                                         </td>
 

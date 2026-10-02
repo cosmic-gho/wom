@@ -48,14 +48,14 @@ export function ProductCard({ product }: ProductCardProps) {
           </div>
 
           <div className="mb-3">
-            {product.priceOnRequest || !product.price ? (
-              <span className="inline-block text-[11px] font-bold text-amber-700 bg-amber-50 border border-amber-200 px-2 py-0.5 rounded">
-                Price on Request
+            {product.price !== undefined && product.price !== null && !isNaN(Number(product.price)) && Number(product.price) > 0 ? (
+              <span className="inline-block text-sm font-extrabold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 rounded">
+                {product.currency === 'EUR' ? '€' : product.currency === 'GBP' ? '£' : product.currency === 'AED' ? 'AED ' : '$'}
+                {Number(product.price).toLocaleString(undefined, { minimumFractionDigits: 2 })}
               </span>
             ) : (
-              <span className="inline-block text-sm font-extrabold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 rounded">
-                {product.currency === 'EUR' ? '€' : product.currency === 'GBP' ? '£' : '$'}
-                {Number(product.price).toLocaleString(undefined, { minimumFractionDigits: 2 })}
+              <span className="inline-block text-[11px] font-bold text-amber-700 bg-amber-50 border border-amber-200 px-2 py-0.5 rounded">
+                Price on Request
               </span>
             )}
           </div>

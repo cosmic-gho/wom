@@ -58,6 +58,8 @@ function slugify(text: string): string {
 // Format item payload for Supabase database table
 function formatForSupabase(type: string, item: any) {
     if (type === 'products') {
+        const numPrice = item.price !== undefined && item.price !== null ? Number(item.price) : null;
+        const hasValidPrice = numPrice !== null && !isNaN(numPrice) && numPrice > 0;
         return {
             id: item.id ? Number(item.id) : undefined,
             title: item.title,
@@ -65,9 +67,9 @@ function formatForSupabase(type: string, item: any) {
             excerpt: item.excerpt || '',
             content_html: item.contentHtml || item.content_html || '',
             date: item.date || new Date().toISOString(),
-            price: item.price ? Number(item.price) : null,
+            price: numPrice,
             currency: item.currency || 'USD',
-            is_price_on_request: item.priceOnRequest !== undefined ? item.priceOnRequest : true,
+            is_price_on_request: hasValidPrice ? false : (item.priceOnRequest !== undefined ? item.priceOnRequest : true),
             categories: item.categories || [],
             featured_image: item.featuredImage || item.featured_image || {},
             seo: item.seo || {},

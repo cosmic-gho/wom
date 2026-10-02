@@ -27,22 +27,26 @@ export async function getProducts(): Promise<Product[]> {
         .order('id', { ascending: false });
 
       if (!error && data && data.length > 0) {
-        return data.map((d: any) => ({
-          id: d.id,
-          title: d.title,
-          slug: d.slug,
-          excerpt: d.excerpt || '',
-          contentHtml: d.content_html || d.contentHtml || '',
-          date: d.date || d.created_at || '',
-          modified: d.updated_at || d.modified || '',
-          price: d.price ? Number(d.price) : null,
-          currency: d.currency || 'USD',
-          priceOnRequest: d.is_price_on_request !== undefined ? d.is_price_on_request : d.priceOnRequest,
-          categories: Array.isArray(d.categories) ? d.categories : [],
-          featuredImage: d.featured_image || d.featuredImage || null,
-          seo: d.seo || {},
-          breadcrumbs: d.breadcrumbs || [],
-        }));
+        return data.map((d: any) => {
+          const numPrice = d.price !== undefined && d.price !== null ? Number(d.price) : null;
+          const hasValidPrice = numPrice !== null && !isNaN(numPrice) && numPrice > 0;
+          return {
+            id: d.id,
+            title: d.title,
+            slug: d.slug,
+            excerpt: d.excerpt || '',
+            contentHtml: d.content_html || d.contentHtml || '',
+            date: d.date || d.created_at || '',
+            modified: d.updated_at || d.modified || '',
+            price: numPrice,
+            currency: d.currency || 'USD',
+            priceOnRequest: hasValidPrice ? false : (d.is_price_on_request !== undefined ? Boolean(d.is_price_on_request) : Boolean(d.priceOnRequest)),
+            categories: Array.isArray(d.categories) ? d.categories : [],
+            featuredImage: d.featured_image || d.featuredImage || null,
+            seo: d.seo || {},
+            breadcrumbs: d.breadcrumbs || [],
+          };
+        });
       }
     } catch (e) {
       console.warn('Supabase getProducts failed, using JSON fallback:', e);
